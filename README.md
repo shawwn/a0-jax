@@ -23,7 +23,8 @@ TF_CPP_MIN_LOG_LEVEL=2 \
 python train_agent.py \
     --game_class="games.connect_four_game.Connect4Game" \
     --agent_class="policies.resnet_policy.ResnetPolicyValueNet" \
-    --batch-size=4096 \
+    --selfplay-batch-size=4096 \
+    --training-batch-size=4096 \
     --num_simulations_per_move=32 \
     --num_self_plays_per_iteration=102400 \
     --learning-rate=1e-2 \
